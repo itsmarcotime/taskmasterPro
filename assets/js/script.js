@@ -199,15 +199,18 @@ $("#task-form-modal .btn-primary").click(function() {
 
     saveTasks();
   }
+  
 });
 
 // remove all tasks
 $("#remove-tasks").on("click", function() {
+
   for (var key in tasks) {
     tasks[key].length = 0;
     $("#list-" + key).empty();
   }
   saveTasks();
+
 });
 
 // load tasks for the first time
